@@ -1,0 +1,10 @@
+package com.statebank.xoriant.service;
+
+import java.util.List;
+
+import com.xoriant.banking.poc.model.TransactionDetails;
+
+public interface TransactionService {
+
+	
+}

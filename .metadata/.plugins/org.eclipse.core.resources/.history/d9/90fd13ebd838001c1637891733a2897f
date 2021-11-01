@@ -1,0 +1,6 @@
+package com.statebank.xoriant.dao.util;
+
+public interface UserDao {
+
+	public int changePassword(String oldPassword, String newPassword, int customer_id);
+}

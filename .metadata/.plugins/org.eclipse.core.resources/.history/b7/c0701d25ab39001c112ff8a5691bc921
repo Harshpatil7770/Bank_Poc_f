@@ -1,0 +1,35 @@
+package com.statebank.xoriant.model;
+
+
+ enum accountType{SAVING,CURRENT}
+ public class AccountType {
+
+	accountType type;
+	public AccountType(accountType type)
+	{
+		this.type=type;
+	}
+ 
+	accountType getAccountType()
+	{
+		return type;
+	}
+   
+      
+	/*
+	 * Current("CURRENT"),
+	 * 
+	 * Saving("SAVING");
+	 * 
+	 * private String accountType;
+	 * 
+	 * private AccountType (String accountType) { this.accountType = accountType; }
+	 * 
+	 * public String getAccountType() { return this.accountType; }
+	 * 
+	 * public void setAccountType(String accountType) { this.accountType =
+	 * accountType; }
+	 */
+			
+}
+ 

@@ -1,0 +1,10 @@
+package com.statebank.xoriant.resource;
+
+@RestController
+@RequestMapping("/api/manager")
+@CrossOrigin
+@RefreshScope
+public class ManagerResource {
+
+	
+}

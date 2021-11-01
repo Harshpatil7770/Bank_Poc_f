@@ -1,0 +1,25 @@
+package com.statebank.xoriant.model;
+
+public class AccountDetails {
+
+	private int accountId;
+	
+	private double balance;
+	
+	private int customerId;
+	
+	private AccountType accountType;
+	
+	private String branchName;
+	
+	private int branchId;
+	
+	private int transactionId;
+	
+	private Branch branch;  //added
+	
+	private PersonInfo personInfo;//added
+
+
+	
+}

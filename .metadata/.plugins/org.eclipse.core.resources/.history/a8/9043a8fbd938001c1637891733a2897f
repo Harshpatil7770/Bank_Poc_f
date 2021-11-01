@@ -1,0 +1,26 @@
+package com.statebank.xoriant.dao.util;
+
+public class UserDTO {
+
+	public static String userName;
+	
+	public static String password;
+	
+	public static String oldPassword;
+	
+	public static String newPassword;
+	
+	public static int customerId;
+    
+	public  String security_question;
+	
+	public String security_answer;
+
+	public UserDTO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+}

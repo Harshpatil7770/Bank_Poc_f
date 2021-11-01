@@ -1,0 +1,21 @@
+package com.statebank.xoriant.model;
+
+public class PersonInfo {
+
+	private int personId;
+	
+	private String personName;
+	
+	private String dob;
+	
+	private String mobNumber;
+	
+	private Address address;
+	
+	private String personType;
+	
+	private Gender gender;
+    
+	
+	
+}

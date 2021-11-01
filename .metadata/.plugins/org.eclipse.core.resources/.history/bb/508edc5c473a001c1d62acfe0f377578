@@ -1,0 +1,5 @@
+package com.statebank.xoriant.dao;
+
+public class ManagerDaoImpl {
+
+}

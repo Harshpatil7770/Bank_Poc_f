@@ -1,0 +1,5 @@
+package com.statebank.xoriant.model;
+
+public enum TransactionType {
+
+}

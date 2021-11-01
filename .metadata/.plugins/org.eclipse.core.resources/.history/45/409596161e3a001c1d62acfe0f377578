@@ -1,0 +1,23 @@
+package com.statebank.xoriant.service;
+
+import java.util.List;
+
+import com.statebank.xoriant.dao.util.CustomerDTO;
+import com.statebank.xoriant.model.TransactionDetails;
+
+public interface TransactionService {
+
+
+	String withdrawMoney(CustomerDTO customerDTO);
+
+	String DepositMoney(CustomerDTO customerDTO);
+
+	List<TransactionDetails> MiniStatement(int accountNumber);
+
+	List<TransactionDetails> CustomizedMiniStatement(CustomerDTO customerDTO);
+
+	String fundTransfer(CustomerDTO customerDTO);
+
+	String checkBalance(int accountNumber);
+
+}

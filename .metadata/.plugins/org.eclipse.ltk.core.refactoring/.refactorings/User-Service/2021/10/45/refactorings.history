@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;UserDTO.java&apos; to &apos;Customer-Service/src/main/java/com.statebank.xoriant.util&apos;&#x0D;&#x0A;- Original project: &apos;User-Service&apos;&#x0D;&#x0A;- Destination element: &apos;Customer-Service/src/main/java/com.statebank.xoriant.util&apos;&#x0D;&#x0A;- Original element: &apos;com.statebank.xoriant.dao.util.UserDTO.java&apos;" description="Copy compilation unit" destination="=Customer-Service/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.statebank.xoriant.util" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.statebank.xoriant.dao.util{UserDTO.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1635664260310" units="1" version="1.0"/>
+</session>

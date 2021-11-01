@@ -1,0 +1,29 @@
+package com.statebank.xoriant;
+
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+
+import com.statebank.xoriant.model.AccountType;
+
+
+@SpringBootApplication
+@EnableDiscoveryClient
+public class TransactionService1Application {
+
+	
+
+	public static void main(String[] args) {
+		SpringApplication.run(TransactionService1Application.class, args);	
+//		accountType type = null;
+//		AccountType t_obj= new AccountType(type.CURRENT);
+//	 	System.out.println("First Account Type=="+t_obj.getAccountType());
+//
+// 	t_obj.setAccountType(type.SAVING);
+// 	System.out.println(" New account Type=="+t_obj.getAccountType());
+	
+		 
+//		 System.out.println("Account Type : =="+t.getAccountType());
+}
+}

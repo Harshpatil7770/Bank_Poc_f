@@ -1,0 +1,22 @@
+package com.statebank.xoriant;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+
+import com.statebank.xoriant.dao.TransactionDaoImpl;
+
+@SpringBootApplication
+@EnableDiscoveryClient
+public class TransactionService1Application {
+
+	public static void main(String[] args) {
+		//SpringApplication.run(TransactionService1Application.class, args);
+		TransactionDaoImpl transaction=new TransactionDaoImpl();
+		
+		transaction.MiniStatement(4000043) ;
+		System.out.println(transaction.MiniStatement(4000043));
+		
+	}
+
+}

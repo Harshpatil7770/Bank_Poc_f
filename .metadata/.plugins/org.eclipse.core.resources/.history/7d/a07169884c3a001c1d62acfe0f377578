@@ -1,0 +1,38 @@
+package com.statebank.xoriant.dao.util;
+
+public class CustomerDTO {
+
+    public String accountNumber; 
+	
+	public String description;
+	
+	public double amount;
+	
+	public int customerId;
+	
+	public String userType;
+	
+	public String transactionType;
+	
+	public String accountType;
+	
+	public String formDate;
+	
+	public String toDate;
+	
+	public String payersAccountNumber;
+	
+	public String payeesAccountNumber;
+	
+	public String oldPassword;
+	
+	public String newPassword;
+
+	public CustomerDTO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	 
+	
+}

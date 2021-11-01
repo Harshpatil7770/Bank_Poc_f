@@ -1,0 +1,34 @@
+package com.statebank.xoriant.service;
+
+import java.util.List;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.statebank.xoriant.model.CustomerDTO;
+import com.statebank.xoriant.model.TransactionDetails;
+
+@FeignClient(name ="transaction-service")
+public interface TransactionServiceProxy {
+	
+	@GetMapping("/api/transaction/withdraw")
+	public String withdrawMoney(@RequestBody CustomerDTO customerDTO);
+
+	@GetMapping("/api/transaction/deposite")
+	public String DepositMoney(@RequestBody CustomerDTO customerDTO);
+
+	@GetMapping("/api/transaction/miniStatement/{accountNumber}")
+	public List<TransactionDetails> MiniStatement(@PathVariable int accountNumber);
+//not working
+	@GetMapping("/api/transaction/customizedStatement")
+	public List<TransactionDetails> CustomizedMiniStatement(@RequestBody CustomerDTO customerDTO);
+
+	@GetMapping("/api/transaction/fundTransfer")
+	public String fundTransfer(@RequestBody CustomerDTO customerDTO) ;
+
+	@GetMapping("/api/transaction/checkBalance/{accountNumber}")
+	public String checkBalance(@PathVariable int accountNumber);
+	
+}

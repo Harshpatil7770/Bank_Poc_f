@@ -1,0 +1,14 @@
+package com.statebank.xoriant.dao.util;
+
+public class UserDTO {
+
+	public String userName;
+	public String password;
+	public String oldPassword;
+	public String newPassword;
+	public int customerId;
+    public  String security_question;
+	
+	public  String security_answer;
+	
+}

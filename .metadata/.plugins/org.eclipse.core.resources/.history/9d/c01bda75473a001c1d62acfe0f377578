@@ -1,0 +1,5 @@
+package com.statebank.xoriant.service;
+
+public class ManagerServiceImpl {
+
+}

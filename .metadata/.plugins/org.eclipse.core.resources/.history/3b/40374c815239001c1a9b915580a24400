@@ -1,0 +1,11 @@
+package com.statebank.xoriant.model;
+
+public enum Gender {
+
+	  /** Male. */
+    Male("MALE"),
+    /** Female. */
+    Female("FEMALE"),
+    
+    
+}

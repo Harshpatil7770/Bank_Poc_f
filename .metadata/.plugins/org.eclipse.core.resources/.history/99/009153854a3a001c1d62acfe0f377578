@@ -1,0 +1,5 @@
+package com.statebank.xoriant.resource;
+
+public class ManagerResource {
+
+}

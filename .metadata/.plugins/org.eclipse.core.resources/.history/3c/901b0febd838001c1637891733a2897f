@@ -1,0 +1,20 @@
+package com.statebank.xoriant.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.statebank.xoriant.dao.util.UserDao;
+
+@Service
+public class UserServiceImpl implements UserService{
+
+	@Autowired
+	private UserDao userDao;
+
+	@Override
+	public int changePassword(String oldPassword, String newPassword, int customer_id) {
+		// TODO Auto-generated method stub
+		return userDao.changePassword(oldPassword, newPassword, customer_id);
+	}
+	
+}

@@ -1,0 +1,92 @@
+package com.statebank.xoriant.resource;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.statebank.xoriant.dao.util.CustomerDTO;
+import com.statebank.xoriant.model.TransactionDetails;
+import com.statebank.xoriant.service.TransactionService;
+
+@RestController
+@RequestMapping("/api/transaction")
+@CrossOrigin
+@RefreshScope
+public class TransactionResource {
+
+	@Autowired
+	private TransactionService transactionService;
+
+	/*
+	 * @GetMapping("/withdraw") public String withdrawMoney(@RequestBody CustomerDTO
+	 * customerDTO) { System.out.
+	 * println("<<<<<<<<<<<<<<<<<<< EXECUTED BY SERVICE 1  >>>>>>>>>>>>>>>>>");
+	 * return transactionService.withdrawMoney(customerDTO); }
+	 */
+	@GetMapping("/withdraw")
+	public String withdrawMoney(@PathVariable int accountNumber, double amount, String description, String userType,
+			String transactionType, String accountType) {
+		
+		CustomerDTO dto=new CustomerDTO();
+		dto.setAccountNumber(accountNumber);
+		dto.setAmount(amount);
+		dto.setDescription(description);
+		dto.setTransactionType(transactionType);
+		dto.setUserType(userType);
+		dto.setAccountType(accountType);
+		return transactionService.withdrawMoney(dto);
+	}
+	
+	@GetMapping("/deposite")
+	public String DepositMoney(@RequestBody CustomerDTO customerDTO) {
+		System.out.println("<<<<<<<<<<<<<<<<<<< EXECUTED BY SERVICE 1  >>>>>>>>>>>>>>>>>");
+		return  transactionService.DepositMoney(customerDTO);
+	}
+
+	@GetMapping("/miniStatement/{accountNumber}")
+	public List<TransactionDetails> MiniStatement(@PathVariable int accountNumber) {
+		System.out.println("<<<<<<<<<<<<<<<<<<< EXECUTED BY SERVICE 1  >>>>>>>>>>>>>>>>>");
+		return transactionService.MiniStatement(accountNumber);
+
+	}
+//not working
+	@GetMapping("/customizedStatement")
+	public List<TransactionDetails> CustomizedMiniStatement(@RequestBody CustomerDTO customerDTO) {
+		System.out.println("<<<<<<<<<<<<<<<<<<< EXECUTED BY SERVICE 1  >>>>>>>>>>>>>>>>>");
+		return transactionService.CustomizedMiniStatement(customerDTO);
+
+	}
+
+	@GetMapping("/fundTransfer")
+	public String fundTransfer(@RequestBody CustomerDTO customerDTO) {
+		System.out.println("<<<<<<<<<<<<<<<<<<< EXECUTED BY SERVICE 1  >>>>>>>>>>>>>>>>>");
+		return transactionService.fundTransfer(customerDTO);
+
+	}
+
+	/*
+	 * @GetMapping("/checkBalance/{accountNumber}") public String
+	 * checkBalance(@PathVariable int accountNumber) { System.out.
+	 * println("<<<<<<<<<<<<<<<<<<< EXECUTED BY SERVICE 1  >>>>>>>>>>>>>>>>>");
+	 * return transactionService.checkBalance(accountNumber);
+	 * 
+	 * }
+	 */
+	
+	@GetMapping("/checkBalance")
+	public String checkBalance(@RequestBody CustomerDTO customerDTO) {
+		System.out.println("<<<<<<<<<<<<<<<<<<< EXECUTED BY SERVICE 1  >>>>>>>>>>>>>>>>>");
+		return transactionService.checkBalance(customerDTO.getAccountNumber());
+
+	}
+	
+	
+
+}

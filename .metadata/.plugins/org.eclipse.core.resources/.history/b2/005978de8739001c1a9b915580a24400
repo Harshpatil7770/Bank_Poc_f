@@ -1,0 +1,44 @@
+package com.statebank.xoriant;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.statebank.xoriant.dao.TransactionDao;
+import com.statebank.xoriant.dao.TransactionDaoImpl;
+
+@SpringBootApplication
+@EnableDiscoveryClient
+public class TransactionService1Application {
+
+	
+
+	public static void main(String[] args) {
+		//SpringApplication.run(TransactionService1Application.class, args);
+	
+		A a= new A();
+		a.fun();
+	}
+
+}
+
+ class A{
+	 @Autowired
+		TransactionDao transactionDao;
+	 void fun()
+	 {
+			
+		 JdbcTemplate t1=new JdbcTemplate();
+		 TransactionDaoImpl t = new TransactionDaoImpl();
+		 
+			
+			t.MiniStatement(4000043,t1) ;
+			System.out.println(t.MiniStatement(4000043,t1));
+			
+		 
+	 }
+	
+	
+}
